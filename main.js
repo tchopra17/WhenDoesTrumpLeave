@@ -1,3 +1,5 @@
+var currentSeconds = 0;
+var end = 0;
 var countdown = function(deadline, elements) {
   var _second = 1000,
       _minute = _second * 60,
@@ -27,7 +29,7 @@ var countdown = function(deadline, elements) {
             timer = setInterval(calculate, _second);
           }
         }
-        
+
         data = {
           'days': Math.floor(remaining / _day),
           'hours': Math.floor((remaining % _day) / _hour),
@@ -42,7 +44,21 @@ var countdown = function(deadline, elements) {
             document.getElementById(x).innerHTML = data[x];
           }
         }
+        animate();
       };
-
+    end = deadline.getTime();
     calculate();
+}
+//Animates blocks
+function animate() {
+  document.getElementById('seconds').className = "animation-target"
+  if (document.getElementById('seconds').innerHTML == "0"){
+    document.getElementById('minutes').className = "animation-target2"
+  }
+  if (document.getElementById('minutes').innerHTML == "0"){
+    document.getElementById('hours').className = "animation-target2"
+  }
+  if (document.getElementById('hours').innerHTML == "0"){
+    document.getElementById('days').className = "animation-target2"
+  }
 }
