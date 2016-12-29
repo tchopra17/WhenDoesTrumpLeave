@@ -4,12 +4,30 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div id="wrapper">
-      <div class="center" id="days">00</div>
-      <div class="center" id="hours">00</div>
-      <div class="center" id="minutes">00</div>
-      <div class="center" id="seconds">00</div>
+    <div id="wrapperBox">
+      <div id="dayBox"></div>
+      <div id="hourBox"></div>
+      <div id="minuteBox"></div>
+      <div id="secondBox"></div>
     </div>
+
+    <div id="wrapper">
+      <div id="days">00</div>
+      <div id="hours">00</div>
+      <div id="minutes">00</div>
+      <div id="seconds">00</div>
+    </div>
+
+    <div id="wrapperText">
+      <div id="dayText">Days</div>
+      <div id="hourText">Hours</div>
+      <div id="minuteText">Minutes</div>
+      <div id="secondText">Seconds</div>
+    </div>
+
+    <div id="titleText">When Does Trump Leave?</div>
+    <div id="bottomText"> Until January 20, 2017.</div>
+    <div id="subText">(hopefully)</div>
     <script type='text/javascript' src='main.js'></script>
     <script>
       countdown('January 20 2021 12:00:00 PM', ['days', 'hours', 'minutes', 'seconds']);

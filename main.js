@@ -51,14 +51,14 @@ var countdown = function(deadline, elements) {
 }
 //Animates blocks
 function animate() {
-  document.getElementById('seconds').className = "animation-target"
+  document.getElementById('secondBox').className = "animation-target"
   if (document.getElementById('seconds').innerHTML == "0"){
-    document.getElementById('minutes').className = "animation-target2"
+    document.getElementById('minuteBox').className = "animation-target3"
   }
   if (document.getElementById('minutes').innerHTML == "0"){
-    document.getElementById('hours').className = "animation-target2"
+    document.getElementById('hourBox').className = "animation-target4"
   }
   if (document.getElementById('hours').innerHTML == "0"){
-    document.getElementById('days').className = "animation-target2"
+    document.getElementById('dayBox').className = "animation-target5"
   }
 }
